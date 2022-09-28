@@ -1,0 +1,38 @@
+Welcome to Scala 3.2.0 (16.0.2, Java Java HotSpot(TM) 64-Bit Server VM).
+Type in expressions for evaluation. Or try :help.
+
+scala> def greeting(greetingWord: String = "Hello", name: String): String = { s"$greetingWord Scala! This is $name" }
+def greeting(greetingWord: String, name: String): String
+
+scala> var myName = "Dmitry"
+var myName: String = Dmitry
+
+scala> println(greeting(name = myName))
+Hello Scala! This is Dmitry
+
+scala> var newGreetingWord = "Hola"
+var newGreetingWord: String = Hola
+
+scala> println(greeting(greetingWord = newGreetingWord, name = myName))
+Hola Scala! This is Dmitry
+
+scala> newGreetingWord = "Guten tag"
+newGreetingWord: String = Guten tag
+
+scala> println(greeting(greetingWord = newGreetingWord, name = myName))
+Guten tag Scala! This is Dmitry
+
+scala> var reversedMyName = myName.reverse
+var reversedMyName: String = yrtimD
+
+scala> println(greeting(greetingWord = newGreetingWord, name = reversedMyName))
+Guten tag Scala! This is yrtimD
+
+scala> var newGreetingWord = "Hola"
+var newGreetingWord: String = Hola
+
+scala> println(greeting(greetingWord = newGreetingWord, name = reversedMyName))
+Hola Scala! This is yrtimD
+
+scala> println(greeting(name = reversedMyName))
+Hello Scala! This is yrtimD
