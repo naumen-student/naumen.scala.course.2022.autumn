@@ -1,0 +1,11 @@
+[debug] Packaging C:\Users\artem\IdeaProjects\SbtExampleProject\target\scala-2.13\sbtexampleproject_2.13-0.1.0-SNAPSHOT.jar ...
+[debug] Input file mappings:
+[debug] 	example
+[debug] 	  C:\Users\artem\IdeaProjects\SbtExampleProject\target\scala-2.13\classes\example
+[debug] 	example\Main$.class
+[debug] 	  C:\Users\artem\IdeaProjects\SbtExampleProject\target\scala-2.13\classes\example\Main$.class
+[debug] 	example\Main$delayedInit$body.class
+[debug] 	  C:\Users\artem\IdeaProjects\SbtExampleProject\target\scala-2.13\classes\example\Main$delayedInit$body.class
+[debug] 	example\Main.class
+[debug] 	  C:\Users\artem\IdeaProjects\SbtExampleProject\target\scala-2.13\classes\example\Main.class
+[debug] Done packaging.
