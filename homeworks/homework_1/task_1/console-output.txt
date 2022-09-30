@@ -1,0 +1,23 @@
+scala> def hello = s"Hello, scala! This is Arina"
+hello: String
+
+scala> println(hello)
+Hello, scala! This is Arina
+
+scala> def spanishHello =hello.replace("Hello", "Hola")
+spanishHello: String
+
+scala> println(spanishHello)
+Hola, scala! This is Arina
+
+scala> def helloReversed = hello.replace("Arina", "anirA")
+helloReversed: String
+
+scala> println(helloReversed)
+Hello, scala! This is anirA
+
+scala> def spanishReversed = spanishHello.replace("Arina", "anirA")
+spanishReversed: String
+
+scala> println(spanishReversed)
+Hola, scala! This is anirA
