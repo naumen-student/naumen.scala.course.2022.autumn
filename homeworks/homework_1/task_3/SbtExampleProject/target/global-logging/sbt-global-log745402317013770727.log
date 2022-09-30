@@ -1,0 +1,21 @@
+[debug] > Exec(~run, None, None)
+[info] sbt server started at local:sbt-server-6fcf76fb43e57194631a
+[debug] Writing bsp connection file
+[info] started sbt server
+[debug] > Exec(__runWatch console0, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(__preWatch console0, None, None)
+[debug] > Exec(run, None, None)
+[debug] Evaluating tasks: Compile / run
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\sasha\IdeaProjects\SbtExampleProject\target\scala-2.13\classes ...
+[error] C:\Users\sasha\IdeaProjects\SbtExampleProject\src\main\scala\example\Main.scala:5:3: illegal start of simple expression
+[error]   val ages = Seq(42, 75, 29, 64)
+[error]   ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[error] Total time: 2 s, completed 30.09.2022 20:24:44
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(__postWatch console0, None, None)
+[debug] > Exec(__waitWatch console0, None, None)

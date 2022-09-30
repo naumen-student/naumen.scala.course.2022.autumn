@@ -1,0 +1,7 @@
+[debug] > Exec({file:/C:/Users/sasha/IdeaProjects/SbtExampleProject/}root/run, None, None)
+[debug] Evaluating tasks: Compile / run
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[success] Total time: 2 s, completed 30.09.2022 20:33:38
+[debug] > Exec(idea-shell, None, None)
+[debug] > Exec(, None, None)
+[debug] > Exec(idea-shell, None, None)

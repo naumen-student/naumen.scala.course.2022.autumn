@@ -1,0 +1,34 @@
+Welcome to Scala 3.1.1 (1.8.0_292, Java OpenJDK 64-Bit Server VM).
+Type in expressions for evaluation. Or try :help.
+
+scala> val hello = "Hello"
+val hello: String = Hello
+
+scala> val hola = "Hola"
+val hola: String = Hola
+
+scala> val gutenTag = "Guten tag"
+val gutenTag: String = Guten tag
+
+scala> val str = "Scala! This is"
+val str: String = Scala! This is
+
+scala> val name = "Alex"
+val name: String = Alex
+
+scala> println(s"$hello $str $name")
+Hello Scala! This is Alex
+
+scala> println(s"$hola $str $name")
+Hola Scala! This is Alex
+
+Guten tag Scala! This is Alex
+
+scala> println(s"$hello $str ${name.reverse}")
+Hello Scala! This is xelA
+
+scala> println(s"$hola $str ${name.reverse}")
+Hola Scala! This is xelA
+
+scala> println(s"$gutenTag $str ${name.reverse}")
+Guten tag Scala! This is xelA
