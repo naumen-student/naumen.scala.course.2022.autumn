@@ -1,0 +1,58 @@
+
+C:\Users\Daniel>scala
+Welcome to Scala 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 17.0.2).
+Type in expressions for evaluation. Or try :help.
+
+scala> def greeting(name: String): Unit = println(s"Hello Scala! This is $name")
+greeting: (name: String)Unit
+
+scala> greeting("Daniel Evdokimov")
+Hello Scala! This is Daniel Evdokimov
+
+scala> def greeting2(name: String): Unit = println(s"Holla Scala! This is $name")
+greeting2: (name: String)Unit
+
+scala> greeting2("Daniel Evdokimov")
+Holla Scala! This is Daniel Evdokimov
+
+scala> def greeting3(name: String): Unit = println(s"Guten tag Scala! This is $name")
+greeting3: (name: String)Unit
+
+scala> greeting3("Daniel Evdokimov")
+Guten tag Scala! This is Daniel Evdokimov
+
+scala> greeting("Daniel Evdokimov".foldRight(""){case (acc, next) => acc ++ next})
+<console>:13: error: value ++ is not a member of Char
+       greeting("Daniel Evdokimov".foldRight(""){case (acc, next) => acc ++ next})
+                                                                         ^
+
+scala> greeting("Daniel Evdokimov".foldRight(""){case (acc, next) => acc :+ next})
+<console>:13: error: value :+ is not a member of Char
+       greeting("Daniel Evdokimov".foldRight(""){case (acc, next) => acc :+ next})
+                                                                         ^
+
+scala> greeting("Daniel Evdokimov".foldRight(""){case (acc, next) => acc +: next})
+Hello Scala! This is Daniel Evdokimov
+
+scala> greeting("Daniel Evdokimov".foldLeft(""){case (acc, next) => acc +: next})
+<console>:13: error: value +: is not a member of Char
+       greeting("Daniel Evdokimov".foldLeft(""){case (acc, next) => acc +: next})
+                                                                        ^
+
+scala> greeting("Daniel Evdokimov".foldRight(""){case (acc, next) => next ++ acc})
+<console>:13: error: type mismatch;
+ found   : Char
+ required: scala.collection.GenTraversableOnce[?]
+       greeting("Daniel Evdokimov".foldRight(""){case (acc, next) => next ++ acc})
+                                                                             ^
+
+scala> greeting("Daniel Evdokimov".foldLeft(""){case (next, acc) => acc +: next})
+Hello Scala! This is vomikodvE leinaD
+
+scala> greeting2("Daniel Evdokimov".foldLeft(""){case (next, acc) => acc +: next})
+Holla Scala! This is vomikodvE leinaD
+
+scala> greeting3("Daniel Evdokimov".foldLeft(""){case (next, acc) => acc +: next})
+Guten tag Scala! This is vomikodvE leinaD
+
+scala>
