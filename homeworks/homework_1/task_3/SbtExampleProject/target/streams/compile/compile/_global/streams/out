@@ -1,0 +1,6 @@
+[debug] Acquiring lock on file C:\Users\Anzhelika\IdeaProjects\SbtExampleProject\project\target\.sbt-compilation-infos\root-compile\.sbt-idea-lock ...
+[error] C:\Users\Anzhelika\IdeaProjects\SbtExampleProject\src\main\scala\example\Main.scala:5:6: not found: type main
+[error]     @main def run() = {
+[error]      ^
+[error] one error found
+[debug] Releasing lock on file C:\Users\Anzhelika\IdeaProjects\SbtExampleProject\project\target\.sbt-compilation-infos\root-compile\.sbt-idea-lock.
