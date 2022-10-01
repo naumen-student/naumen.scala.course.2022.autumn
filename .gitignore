@@ -1,1 +1,5 @@
-.idea
+*.idea/
+*target/
+*project/
+*.bsp/
+*null/
