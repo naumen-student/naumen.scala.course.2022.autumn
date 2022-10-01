@@ -1,0 +1,11 @@
+[debug] > Exec(all {file:/D:/Py/Scala/task_3/}root/products {file:/D:/Py/Scala/task_3/}root/test:products, None, None)
+[debug] Evaluating tasks: Compile / products, Test / products
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Py\Scala\task_3\target\scala-2.13\classes ...
+[info] Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.9. Compiling...
+[info]   Compilation completed in 5.352s.
+[info] done compiling
+[success] Total time: 7 s, completed 1 окт. 2022 г., 21:12:23
+[debug] > Exec(idea-shell, None, None)
+[debug] > Exec(, None, None)
+[debug] > Exec(idea-shell, None, None)

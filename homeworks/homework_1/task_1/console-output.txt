@@ -1,0 +1,20 @@
+C:\bin\graalvm-ce-java17-22.1.0\bin\java.exe -Djline.terminal=NONE "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.2\lib\idea_rt.jar=53417:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.2\bin" -Dfile.encoding=UTF-8 -classpath D:\Py\Scala\task_3\target\scala-2.13\classes;C:\Users\Pam\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.13.9\scala-library-2.13.9.jar;C:\Users\Pam\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\io\github\java-diff-utils\java-diff-utils\4.12\java-diff-utils-4.12.jar;C:\Users\Pam\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\net\java\dev\jna\jna\5.9.0\jna-5.9.0.jar;C:\Users\Pam\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\jline\jline\3.21.0\jline-3.21.0.jar;C:\Users\Pam\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-compiler\2.13.9\scala-compiler-2.13.9.jar;C:\Users\Pam\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-reflect\2.13.9\scala-reflect-2.13.9.jar;C:\Users\Pam\AppData\Roaming\JetBrains\IdeaIC2022.2\plugins\Scala\lib\runners.jar scala.tools.nsc.MainGenericRunner -usejavacp -Xjline:off
+Welcome to Scala 2.13.9 (OpenJDK 64-Bit Server VM, Java 17.0.3).
+Type in expressions for evaluation. Or try :help.
+
+scala> val name = "Alexander Paschenko"
+val name: String = Alexander Paschenko
+
+scala> List("Hello", "Hola", "Guten Tag").map(privet => println(s"${privet} Scala! This is ${name}"))
+Hello Scala! This is Alexander Paschenko
+Hola Scala! This is Alexander Paschenko
+Guten Tag Scala! This is Alexander Paschenko
+val res0: List[Unit] = List((), (), ())
+
+scala> List("Hello", "Hola", "Guten Tag").map(privet => println(s"${privet} Scala! This is ${name.reverse}"))
+Hello Scala! This is oknehcsaP rednaxelA
+Hola Scala! This is oknehcsaP rednaxelA
+Guten Tag Scala! This is oknehcsaP rednaxelA
+val res1: List[Unit] = List((), (), ())
+
+scala>
