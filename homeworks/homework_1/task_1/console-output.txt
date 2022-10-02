@@ -1,0 +1,38 @@
+nick@nick-msi:~/naumen.scala.course.2022.autumn$ scala
+Welcome to Scala 3.2.0 (1.8.0_292, Java OpenJDK 64-Bit Server VM).
+Type in expressions for evaluation. Or try :help.
+                                                                                                                                                   
+scala> val hello_en = "Hello"
+val hello_en: String = Hello
+                                                                                                                                                   
+scala> val hello_de = "Gutten tag"
+val hello_de: String = Gutten tag
+                                                                                                                                                   
+scala> val hello_es = "Hola"
+val hello_es: String = Hola
+                                                                                                                                                   
+scala> val name = "Riabtsev Nikita"
+val name: String = Riabtsev Nikita
+                                                                                                                                                   
+scala> val make_greeting = (h: String, n: String) => h + " Scala! This is " + n
+val make_greeting: (String, String) => String = Lambda$1461/1680628659@4e79c25
+                                                                                                                                                   
+scala> println(make_greeting(hello_en, name))
+Hello Scala! This is Riabtsev Nikita
+                                                                                                                                                   
+scala> println(make_greeting(hello_de, name))
+Gutten tag Scala! This is Riabtsev Nikita
+                                                                                                                                                   
+scala> println(make_greeting(hello_es, name))
+Hola Scala! This is Riabtsev Nikita
+                                                                                                                                                   
+scala> println(make_greeting(hello_es, name.reverse))
+Hola Scala! This is atikiN vestbaiR
+                                                                                                                                                   
+scala> println(make_greeting(hello_en, name.reverse))
+Hello Scala! This is atikiN vestbaiR
+                                                                                                                                                   
+scala> println(make_greeting(hello_de, name.reverse))
+Gutten tag Scala! This is atikiN vestbaiR
+                                                                                                                                                   
+scala> 
