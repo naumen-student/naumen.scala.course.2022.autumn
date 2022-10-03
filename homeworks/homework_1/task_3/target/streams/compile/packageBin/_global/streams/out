@@ -1,0 +1,11 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /home/yulya/IdeaProjects/SbtExampleProject/target/scala-3.2.0/sbtexampleproject_3-0.1.0-SNAPSHOT.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/yulya/IdeaProjects/SbtExampleProject/target/scala-3.2.0/classes/example[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example/Main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/yulya/IdeaProjects/SbtExampleProject/target/scala-3.2.0/classes/example/Main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example/Main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/yulya/IdeaProjects/SbtExampleProject/target/scala-3.2.0/classes/example/Main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example/Main.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/yulya/IdeaProjects/SbtExampleProject/target/scala-3.2.0/classes/example/Main.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
