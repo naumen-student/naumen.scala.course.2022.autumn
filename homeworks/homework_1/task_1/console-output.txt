@@ -1,0 +1,48 @@
+MacBook-Pro:~ sergej$ scala
+Welcome to Scala 3.2.0 (1.8.0_131, Java Java HotSpot(TM) 64-Bit Server VM).
+Type in expressions for evaluation. Or try :help.
+                                                                                
+scala> val name = "Sergey"
+val name: String = Sergey
+                                                                                
+scala> println(s"Hello Scala! This is ${name}")
+Hello Scala! This is Sergey
+                                                                                
+scala> val getScalaGreetings = (greetings: String) => s"${greetings} Scala! This is ${name}"
+val getScalaGreetings: String => String = Lambda$1364/1736804080@5ad6f98e
+                                                                                
+scala> val allGreetings = Seq("Hello", "Hola", "Guten tag", "Bonjour", "Privet")
+
+val allGreetings: Seq[String] = List(Hello, Hola, Guten tag, Bonjour, Privet)
+                                                                                
+scala> for (greeting <- allGreetings) println(getScalaGreetings(greeting))
+     | 
+Hello Scala! This is Sergey
+Hola Scala! This is Sergey
+Guten tag Scala! This is Sergey
+Bonjour Scala! This is Sergey
+Privet Scala! This is Sergey
+                                                                                
+scala> val getUserScalaGreetings = (greetings: String, userName: String) => getScalaGreetings(greetings).replace(name, userName)
+val getUserScalaGreetings: (String, String) => String = Lambda$1485/356279811@24e2355c
+                                                                                
+scala> for (greeting <- allGreetings) println(getUserScalaGreetings(greeting, name.toUpperCase()))
+Hello Scala! This is SERGEY
+Hola Scala! This is SERGEY
+Guten tag Scala! This is SERGEY
+Bonjour Scala! This is SERGEY
+Privet Scala! This is SERGEY
+                                                                                
+scala> def reverse(s: String): String = {
+     | var res = ""
+     | for (i <- s.length() - 1 to 0 by -1) res = res + s(i)
+     | return res
+     | }
+def reverse(s: String): String
+                                                                                
+scala> for (greeting <- allGreetings) println(getUserScalaGreetings(greeting, reverse(name)))
+Hello Scala! This is yegreS
+Hola Scala! This is yegreS
+Guten tag Scala! This is yegreS
+Bonjour Scala! This is yegreS
+Privet Scala! This is yegreS
