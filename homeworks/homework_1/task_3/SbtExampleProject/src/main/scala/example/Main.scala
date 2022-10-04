@@ -4,6 +4,7 @@ object Main extends App {
   var welcome = "Hello"
   val staticPart = " Scala! This is "
   val name = "Ekaterina"
+  
   println(welcome + staticPart + name)
 
   val variousGreetings = new Array[String](2)
