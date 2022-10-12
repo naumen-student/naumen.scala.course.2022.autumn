@@ -25,5 +25,10 @@ object Test extends TestSuite{
         'test_sumCosines - {
             assert(Exercises.sumCosines(Vector2D(3, 3), Vector2D(1, 1), Vector2D(3, 1), Vector2D(1, 1)) == (1 + 2 / java.lang.Math.sqrt(5)))
         }
+        'test_sortByHeavyweight - {
+            assert(Exercises.sortByHeavyweight() == Seq("Tin", "Platinum", "Nickel", "Aluminum", "Titanium",
+                "Lead", "Sodium", "Uranium", "Gold", "Tungsten", "Zirconium", "Chrome", "Iron", "Copper", "Silver",
+                "Plutonium", "Cobalt", "Cesium", "Calcium", "Lithium", "Magnesium", "Potassium", "Graphite"))
+        }
     }
 }
