@@ -1,4 +1,5 @@
 import utest._
+import Exercises.Vector2D
 
 object Test extends TestSuite{
 
@@ -17,6 +18,12 @@ object Test extends TestSuite{
             assert(Exercises.primeFactor(80) == Seq(2, 5))
             assert(Exercises.primeFactor(98) == Seq(2, 7))
             assert(Exercises.primeFactor(121) == Seq(11))
+        }
+        'test_sumScalars - {
+            assert(Exercises.sumScalars(Vector2D(3, 3), Vector2D(1, 1), Vector2D(3, 1), Vector2D(1, 1)) == 10)
+        }
+        'test_sumCosines - {
+            assert(Exercises.sumCosines(Vector2D(3, 3), Vector2D(1, 1), Vector2D(3, 1), Vector2D(1, 1)) == (1 + 2 / java.lang.Math.sqrt(5)))
         }
     }
 }
