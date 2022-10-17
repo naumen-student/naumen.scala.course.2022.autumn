@@ -12,11 +12,33 @@ object Exercises {
      * Реализуйте функцию тремя разными способами, отличающимися тем, как определяется какой тип имеет значение переданное в аргументе. 
      * Определение типа необходимо для реализации специальной логики работы с Boolean значениями, которая описана в условии выше.
      */
-    def prettyBooleanFormatter1(x: Any): String = ???
+    def prettyBooleanFormatter1(x: Any): String = {
+        x match {
+            case isBool: Boolean => if (isBool) "правда" else "ложь"
+            case other: Any => other.toString
+        }
+    }
 
-    def prettyBooleanFormatter2(x: Any): String = ???
+    def prettyBooleanFormatter2(x: Any): String = {
+        val isBool = x.isInstanceOf[Boolean]
+        if(isBool){
+            if (x.asInstanceOf[Boolean]) "правда" else "ложь"
+        }
+        else {
+            x.toString
+        }
+    }
 
-    def prettyBooleanFormatter3(x: Any): String = ???
+    def prettyBooleanFormatter3(x: Any): String = {
+        val typeX = x.getClass
+        val typeBool: Any = true
+        if (typeX == typeBool.getClass){
+            if (x.asInstanceOf[Boolean]) "правда" else "ложь"
+        }
+        else {
+            x.toString
+        }
+    }
 
 
     /**
