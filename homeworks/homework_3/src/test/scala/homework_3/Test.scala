@@ -17,5 +17,17 @@ object Test extends TestSuite{
             assert(Exercises.prettyBooleanFormatter3("string") == "string")
         }
 
+        'test_max_seq_have_elems - {
+            val someSeq = Seq(1, 2, 3)
+            assert(Exercises.max1(someSeq) == 3)
+            assert(Exercises.max2(someSeq) == Seq(3))
+            assert(Exercises.max3(someSeq).contains(3))
+        }
+
+        'test_max_seq_empty - {
+            val emptySeq = Seq()
+            assert(Exercises.max2(emptySeq).isEmpty)
+            assert(Exercises.max3(emptySeq).isEmpty)
+        }
     }
 }
