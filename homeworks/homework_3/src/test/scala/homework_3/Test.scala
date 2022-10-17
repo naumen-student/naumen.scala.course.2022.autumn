@@ -29,5 +29,14 @@ object Test extends TestSuite{
             assert(Exercises.max2(emptySeq).isEmpty)
             assert(Exercises.max3(emptySeq).isEmpty)
         }
+
+        'test_sum - {
+            val x = 2
+            val y = 3
+            val sum = x + y
+            assert(Exercises.sum1(x, y) == sum)
+            assert(Exercises.sum2(x, y) == sum)
+            assert(Exercises.sum3(x, y) == sum)
+        }
     }
 }
