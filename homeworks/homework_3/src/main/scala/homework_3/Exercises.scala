@@ -12,11 +12,27 @@ object Exercises {
      * Реализуйте функцию тремя разными способами, отличающимися тем, как определяется какой тип имеет значение переданное в аргументе. 
      * Определение типа необходимо для реализации специальной логики работы с Boolean значениями, которая описана в условии выше.
      */
-    def prettyBooleanFormatter1(x: Any): String = ???
+    def prettyBooleanFormatter1(x: Any): String = {
+        var result = x.toString
+        if (x.isInstanceOf[Boolean]) {
+            result = if (x.asInstanceOf[Boolean]) "правда" else "ложь"
+        }
+        result
+    }
 
-    def prettyBooleanFormatter2(x: Any): String = ???
+    def prettyBooleanFormatter2(x: Any): String = {
+        var result = x.toString
+        println(x.getClass)
+        if (x.getClass == classOf[java.lang.Boolean]) {
+            result = if (x.asInstanceOf[Boolean]) "правда" else "ложь"
+        }
+        result
+    }
 
-    def prettyBooleanFormatter3(x: Any): String = ???
+    def prettyBooleanFormatter3(x: Any): String = x match {
+        case value: Boolean => if (value) "правда" else "ложь"
+        case _ => x.toString
+    }
 
 
     /**
@@ -26,11 +42,13 @@ object Exercises {
      * Реализуйте функцию тремя разными способами, отличающимися тем как функция себя ведет на пустой коллекции. 
      * Обратите внимание на возвращаемые типы.
      */
-    def max1(xs: Seq[Int]): Int = ???
+    def max1(xs: Seq[Int]): Int = if (xs.isEmpty) throw new EmptySeqException("empty seq") else xs.max
 
-    def max2(xs: Seq[Int]): Seq[Int] = ???
+    def max2(xs: Seq[Int]): Seq[Int] = if (xs.isEmpty) xs else Seq(xs.max)
 
-    def max3(xs: Seq[Int]): Option[Int] = ???
+    def max3(xs: Seq[Int]): Option[Int] = if (xs.isEmpty) None else Some(xs.max)
+
+    class EmptySeqException(message: String) extends Exception(message)
 
     /**
      * Задание №3
@@ -42,8 +60,11 @@ object Exercises {
      * Реализуйте на основе нее 3 варианта суммирования 2х чисел, отличающиеся способом передачи этих 2х чисел в функцию sumIntegers.
      * Как минимум одна из реализаций должна использовать тип данных (класс) написанный вами самостоятельно.
      */ 
-    def sum1(x: Int, y: Int): Int = sumIntegers(???)
-    def sum2(x: Int, y: Int): Int = sumIntegers(???)
-    def sum3(x: Int, y: Int): Int = sumIntegers(???)
+    def sum1(x: Int, y: Int): Int = sumIntegers(Seq(x, y))
+    def sum2(x: Int, y: Int): Int = sumIntegers(List(x, y))
+    def sum3(x: Int, y: Int): Int = sumIntegers(new MyCollection(x, y))
 
+    class MyCollection(x: Int, y: Int) extends Iterable[Int] {
+        override def iterator: Iterator[Int] = Iterator(x, y)
+    }
 }
