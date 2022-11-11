@@ -320,26 +320,6 @@ val reverse1 = edcba.reverse
 
 ---
 
-### Reverse для внимательных
-
-```scala
-val lst = List(1, 2, 3, 4, 5)
-
-lst.reverse.init // res0: List[Int] = List(5, 4, 3, 2)
-lst.tail.reverse // res1: List[Int] = List(5, 4, 3, 2)
-
-lst.reverse.tail // res2: List[Int] = List(4, 3, 2, 1)
-lst.init.reverse // res3: List[Int] = List(4, 3, 2, 1)
-
-lst.reverse.head // res4: Int = 5
-lst.last // res5: Int = 5
-
-lst.reverse.last // res6: Int = 1
-lst.head // res7: Int = 1
-```
-
----
-
 ### Drop, take, splitat
 
 ```scala
@@ -499,6 +479,30 @@ listOpt.flatten
 
 List(1,2,3).flatMap(Some(_))
 // res4: List[Int] = List(1, 2, 3)
+```
+
+---
+
+### map, flatmap
+
+```scala
+val li = 3 :: 2 :: 1 :: Nil
+val filterOpt: Int => Option[Int] = x => if (x % 2 == 0) Some(x) else None
+
+for {
+    item <- li
+    itemPlus = item + 1
+    itemAfterOpt <- filterOpt(itemPlus)
+} yield itemAfterOpt
+// List(4, 2)
+```
+
+```scala
+li.map { item => val itemPlus = item + 1; (item, itemPlus) }
+    .flatMap { case (item, itemPlus) =>
+        filterOpt(itemPlus)
+            .map(itemAfterOpt => itemAfterOpt)
+    }
 ```
 
 ---
@@ -682,6 +686,7 @@ val opt: Option[Int] = None
 // opt: Option[Int] = None
 opt.fold(0)(_ + 42)
 // res6: Int = 0
+opt.map(_ + 42).getOrElse(0)
 ```
 
 ---
@@ -851,27 +856,39 @@ for (word <- split)
 Множество уникальных отображений.
 
 ```scala
-val map1 = Map("one" -> 1, "two" -> 2) 
+val map1 = Map(
+  "one" -> 1,
+  "two" -> 2
+) 
 //map1: Map[String, Int] = Map("one" -> 1, "two" -> 2)
 
-val map2 = Map("one" -> 1,
-  "two" -> 3, "three" -> 3, "two" -> 2) 
+val map2 = Map(
+  "one" -> 1,
+  "two" -> 3,
+  "three" -> 3,
+  "two" -> 2
+) 
 //Map("one" -> 1, "two" -> 2, "three" -> 3)
 ```
 
 ---
 
-### TreeMap, SortedMap
+### TreeMap, HashMap
 
 ```scala
-import scala.collection.immutable.SortedMap
+import scala.collection.immutable.HashMap
 import scala.collection.immutable.TreeMap
 
-val sMap = SortedMap(3 -> 'c', 4 -> 'd', 1 -> 'a', 2 -> 'b')
-// Map(1 -> 'a', 2 -> 'b', 3 -> 'c', 4 -> 'd')
+val sMap = HashMap(3 -> 'c', 4 -> 'd', 1 -> 'a', 2 -> 'b')
+// Хэш-таблица
+
 val tMap = TreeMap(3 -> 'c', 4 -> 'd', 1 -> 'a', 2 -> 'b')
-// Map(1 -> 'a', 2 -> 'b', 3 -> 'c', 4 -> 'd')
+// Красно-чёрное дерево
 ```
+
+---
+
+![](images/set-map-performance.png)
 
 ---
 
@@ -880,8 +897,8 @@ val tMap = TreeMap(3 -> 'c', 4 -> 'd', 1 -> 'a', 2 -> 'b')
 При сравнении коллекции Scala деляется на группы: 
 
 - Множества (sets); 
-- отображения (maps);
-- последовательности (sequences). 
+- Отображения (maps);
+- Последовательности (sequences). 
 
 ---
 
@@ -1026,72 +1043,6 @@ val scalaList = javaList.asScala.toList
 
 ---
 
-## Сортировка пузырьком
-
-```scala
-ЦИКЛ ДЛЯ J=1 ДО N-1 ШАГ 1
-  F=0 
-  ЦИКЛ ДЛЯ I=1 ДО N-J-1 ШАГ 1 
-    ЕСЛИ A[I] > A[I+1] ТО ОБМЕН A[I],A[I+1]:F=1
-  СЛЕДУЮЩЕЕ I  
-  ЕСЛИ F=0 ТО ВЫХОД ИЗ ЦИКЛА
-СЛЕДУЮЩЕЕ J  
-```
-
----
-
-### Нефункциональный подход
-
-```scala
-def bubblesort[A](arr: Array[A])
-(implicit ord: Ordering[A]): Array[A] = {
-  import ord._
-  for (j <- 1 to arr.length - 1)
-    for (i <- 0 to (arr.length - 1 - j))
-      if (arr(i) > arr(i + 1)) {
-        var t = arr(i)
-        arr(i) = arr(i + 1)
-        arr(i + 1) = t
-      }
-  arr
-}
-
-bubblesort(Array(3, 4, 1, 2, 5))
-// res0: Array[Int] = Array(1, 2, 3, 4, 5)
-```
-
----
-
-### Функциональный подход
-
-```scala
-def bubblesort[A](list: List[A])
-(implicit ord: Ordering[A]): List[A] = {
-  import ord._
-
-  def sort(source: List[A], result: List[A]): List[A] =
-    if (source.isEmpty) result
-    else bubble(source, Nil, result)
-
-  @tailrec
-  def bubble(source: List[A], temp: List[A], result: List[A]): List[A] = 
-    source match {
-      case h1 :: h2 :: t =>
-        if (h1 > h2) bubble(h1 :: t, h2 :: temp, result)
-        else bubble(h2 :: t, h1 :: temp, result)
-      case h1 :: Nil     => sort(temp, h1 :: result)
-    }
-
-  sort(list, Nil)
-}
-bubblesort(List(3, 4, 5, 1, 2, 6))
-// res0: List[Int] = List(1, 2, 3, 4, 5, 6)
-```
-
----
-
 ## Спасибо за внимание
 
 - https://docs.scala-lang.org/overviews/collections-2.13/introduction.html
-- https://www.coursera.org/specializations/scala
-- https://t.me/scala_learn
