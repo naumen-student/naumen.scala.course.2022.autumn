@@ -34,11 +34,11 @@ object Exercises {
   }
 
   case object Milk extends Food[Cat] {
-    override val _name: String = "milk"
+    override val _name = "milk"
   }
 
 
   case object Bread extends Food[Dog] {
-    override val _name: String = "bread"
+    override val _name = "bread"
   }
 }
