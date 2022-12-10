@@ -8,6 +8,10 @@ class Test extends AnyFlatSpec with should.Matchers {
     ListOps.foldOption[Any](_ == _)(DataList.EmptyList) should be (None)
   }
 
+  "foldOption" should "work correct on non empty list with one element" in {
+    ListOps.foldOption[String](_ ++ _)(DataList("1")) should be (Some("1"))
+  }
+
   "foldOption" should "work correct on non empty list" in {
     ListOps.foldOption[String](_ ++ _)(DataList("1", "2", "3")) should be (Some("123"))
   }
