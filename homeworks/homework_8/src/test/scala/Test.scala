@@ -5,19 +5,19 @@ import Exercises._
 object Test extends TestSuite {
 
   val tests = Tests {
-    'string - {
+    test("string") {
       val success = Read.read[String]("test")
       assert(success == Right("test"))
     }
 
-    'int - {
+    test("int") {
       val success = "123".read[Int]
       assert(success == Right(123))
       val failure = "test".read[Int]
       assert(failure.isLeft)
     }
 
-    'option - {
+    test("option") {
       val none1 = "None".read[Option[String]]
       assert(none1 == Right(None))
       val someString = "Some(test)".read[Option[String]]
