@@ -9,40 +9,69 @@ object ListOps {
    * @param f функция свёртывания. Применяется попарно к предыдущему результату применения и i-ому элементу списка
    * @return None - если список пустой
    */
-  def foldOption[T](f: (T, T) => T): DataList[T] => Option[T] = ???
-
-
-  /**
-   * Используя foldOption[T](f: (T, T) => T) реализуйте суммирование всех элементов списка.
-   * @return Если список пустой, то 0
-   */
-  def sum[T : Numeric](list: DataList[T]): T = {
-    /**
-     * Используйте для суммирования двух чисел любого типа (Int, Long, Double, Float etc)
-     */
-    def sumT(a: T, b: T) = implicitly[Numeric[T]].plus(a, b)
-
-    ???
+  def foldOption[T](f: (T, T) => T): DataList[T] => Option[T] = {
+    case DataList.NonEmptyList(headOuter, tailOuter) => tailOuter match {
+      case DataList.NonEmptyList(headInner, tailInner) =>
+        foldOption(f)(DataList.NonEmptyList(f(headOuter, headInner), tailInner))
+      case DataList.EmptyList => Some(headOuter)
+    }
+    case DataList.EmptyList => None
   }
 
-  /**
-   * Фильтрация списка. Хвостовая рекурсия
-   * @param f - фильтрующее правило (если f(a[i]) == true, то элемент остаётся в списке)
-   */
-  @tailrec
-  private def filterImpl[T](f: T => Boolean)(buffer: DataList[T])(l: DataList[T]): DataList[T] = ???
 
-  final def filter[T](f: T => Boolean): DataList[T] => DataList[T] = filterImpl(f)(DataList.EmptyList)
+      /**
+       * Используя foldOption[T](f: (T, T) => T) реализуйте суммирование всех элементов списка.
+       * @return Если список пустой, то 0
+       */
+      def sum[T : Numeric](list: DataList[T]): T = {
+        /**
+         * Используйте для суммирования двух чисел любого типа (Int, Long, Double, Float etc)
+         */
+        def sumT(a: T, b: T) = implicitly[Numeric[T]].plus(a, b)
 
-  final def map[A, B](f: A => B): DataList[A] => DataList[B] = {
-    case DataList.EmptyList => DataList.EmptyList
-    case DataList.NonEmptyList(head, tail) => DataList.NonEmptyList(f(head), map(f)(tail))
+        foldOption(sumT)(list) match {
+          case Some(sum) => sum
+          case None => implicitly[Numeric[T]].zero
+        }
+      }
+
+      /**
+       * Фильтрация списка. Хвостовая рекурсия
+       * @param f - фильтрующее правило (если f(a[i]) == true, то элемент остаётся в списке)
+       */
+      @tailrec
+      private def filterImpl[T](f: T => Boolean)(buffer: DataList[T])(l: DataList[T]): DataList[T] = {
+        l match {
+          case DataList.NonEmptyList(head, tail) =>
+            if(f(head))
+              filterImpl(f)(DataList.NonEmptyList(head, buffer))(tail)
+            else
+              filterImpl(f)(buffer)(tail)
+          case DataList.EmptyList => reverse(buffer)(DataList.EmptyList)
+        }
+      }
+
+    @tailrec
+    private def reverse[T](rList: DataList[T])(reversedList: DataList[T]): DataList[T] = {
+      rList match {
+        case DataList.NonEmptyList(head, tail) =>
+          reverse(tail)(DataList.NonEmptyList(head, reversedList))
+        case DataList.EmptyList => reversedList
+      }
+    }
+
+      final def filter[T](f: T => Boolean): DataList[T] => DataList[T] = filterImpl(f)(DataList.EmptyList)
+
+      final def map[A, B](f: A => B): DataList[A] => DataList[B] = {
+        case DataList.EmptyList => DataList.EmptyList
+        case DataList.NonEmptyList(head, tail) => DataList.NonEmptyList(f(head), map(f)(tail))
+      }
+
+      /**
+       * Используя композицию функций реализуйте collect. Collect - комбинация filter и map.
+       * В качестве фильтрующего правила нужно использовать f.isDefinedAt
+       */
+      def collect[A, B](f: PartialFunction[A, B]): DataList[A] => DataList[B] = lst => {
+        map(f)(filter(f.isDefinedAt)(lst))
+      }
   }
-
-  /**
-   * Используя композицию функций реализуйте collect. Collect - комбинация filter и map.
-   * В качестве фильтрующего правила нужно использовать f.isDefinedAt
-   */
-  def collect[A, B](f: PartialFunction[A, B]): DataList[A] => DataList[B] = ???
-
-}
