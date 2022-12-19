@@ -25,10 +25,7 @@ object Exercises {
   val someRegex: Regex = """Some\((\S+)\)""".r
   implicit def optionReader[T: Read]: Read[Option[T]] = {
     case "None" => Right(None)
-    case someRegex(value) => value.read[T] match {
-      case Right(x) => Right(Some(x))
-      case Left(x) => Left(s"$x can't be read")
-    }
+    case someRegex(value) => value.read[T].map(Some(_))
     case x => Left(s"$x can't be read")
   }
 }
