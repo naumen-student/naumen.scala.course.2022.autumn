@@ -3,7 +3,7 @@ import utest._
 
 object Test extends TestSuite {
 
-  val tests = Tests {
+  val tests: Tests = Tests {
 
     //Test task 1
 
