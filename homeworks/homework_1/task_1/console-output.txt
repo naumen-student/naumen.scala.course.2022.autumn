@@ -1,0 +1,55 @@
+PS C:\Users\m9cko> scala
+Welcome to Scala 2.12.10 (OpenJDK 64-Bit Server VM, Java 11.0.12).
+Type in expressions for evaluation. Or try :help.
+
+scala> println("Hello Scala! This is xsitin!")
+Hello Scala! This is xsitin!
+
+scala> var text = " Scala! This is xsitin!"
+text: String = " Scala! This is xsitin!"
+
+scala> val greetings = Array("Hola", "Guten tag", "Hello")
+greetings: Array[String] = Array(Hola, Guten tag, Hello)
+
+scala> for (greeting <- greetings) println(greeting + text)
+Hola Scala! This is xsitin!
+Guten tag Scala! This is xsitin!
+Hello Scala! This is xsitin!
+
+scala> text = " Scala! This is "
+text: String =  Scala! This is
+
+scala> var name = "xsitin"
+name: String = xsitin
+
+scala> for (greeting <- greetings) println("$greeting$text$name!")
+$greeting$text$name!
+$greeting$text$name!
+$greeting$text$name!
+
+scala> for (greeting <- greetings) println("$greeting $text $name!")
+$greeting $text $name!
+$greeting $text $name!
+$greeting $text $name!
+
+scala> for (greeting <- greetings) println("${greeting}${text} ${name}!")
+${greeting}${text} ${name}!
+${greeting}${text} ${name}!
+${greeting}${text} ${name}!
+
+scala> for (greeting <- greetings) println(s"${greeting}${text} ${name}!")
+Hola Scala! This is  xsitin!
+Guten tag Scala! This is  xsitin!
+Hello Scala! This is  xsitin!
+
+scala> for (greeting <- greetings) println(s"$greeting$text$name!")
+Hola Scala! This is xsitin!
+Guten tag Scala! This is xsitin!
+Hello Scala! This is xsitin!
+
+scala> for (greeting <- greetings) println(s"$greeting$text${name.reverse}!")
+Hola Scala! This is nitisx!
+Guten tag Scala! This is nitisx!
+Hello Scala! This is nitisx!
+
+scala> Завершить выполнение пакетного файла [Y(да)/N(нет)]? y
