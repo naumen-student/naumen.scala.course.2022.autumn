@@ -1,0 +1,26 @@
+Welcome to Scala 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_333).
+Type in expressions for evaluation. Or try :help.
+
+scala> def hello(name: String) = s"Hello, scala! This is ${name}."
+hello: (name: String)String
+
+scala> val name = "Egor"
+name: String = Egor
+
+scala> println(hello(name))
+Hello, scala! This is Egor.
+
+scala> def germanHello(name: String) = hello(name).replace("Hello", "Guten Abend")
+germanHello: (name: String)String
+
+scala> println(germanHello(name))
+Guten Abend, scala! This is Egor.
+
+scala> val rev = name.reverse
+rev: String = rogE
+
+scala> println(hello(rev))
+Hello, scala! This is rogE.
+
+scala> println(germanHello(rev))
+Guten Abend, scala! This is rogE.
