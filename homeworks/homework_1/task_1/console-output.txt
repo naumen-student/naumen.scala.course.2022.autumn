@@ -1,0 +1,29 @@
+"C:\Program Files\Eclipse Adoptium\jdk-17.0.1.12-hotspot\bin\java.exe" -Djline.terminal=NONE -javaagent:C:\Users\Killjoyer\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\222.3345.118\lib\idea_rt.jar=54962:C:\Users\Killjoyer\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\222.3345.118\bin -Dfile.encoding=UTF-8 -classpath C:\Users\Killjoyer\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.13.8\scala-library-2.13.8.jar;C:\Users\Killjoyer\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-reflect\2.13.8\scala-reflect-2.13.8.jar;C:\Users\Killjoyer\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-compiler\2.13.8\scala-compiler-2.13.8.jar;C:\Users\Killjoyer\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\222.3345.118.plugins\Scala\lib\runners.jar scala.tools.nsc.MainGenericRunner -usejavacp -Xjline:off
+Welcome to Scala 2.13.8 (OpenJDK 64-Bit Server VM, Java 17.0.1).
+Type in expressions for evaluation. Or try :help.
+
+scala> def greeting(name: String) = s"Hello, scala! This is ${name}."
+def greeting(name: String): String
+
+scala> val name = "Simon"
+val name: String = Simon
+
+scala> println(greeting(name))
+Hello, scala! This is Simon.
+
+scala> def germanGreeting(name: String) = greeting(name).replace("Hello", "Guten Abend")
+def germanGreeting(name: String): String
+
+scala> println(germanGreeting(name))
+Guten Abend, scala! This is Simon.
+
+scala> val reversedName = name.reverse
+val reversedName: String = nomiS
+
+scala> println(greeting(reversedName))
+Hello, scala! This is nomiS.
+
+scala> println(germanGreeting(reversedName))
+Guten Abend, scala! This is nomiS.
+
+scala>
