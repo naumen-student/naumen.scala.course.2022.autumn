@@ -22,9 +22,10 @@ class ReferenceCell(ix: Int, iy: Int, table: Table) extends Cell {
   override def str: String = {
     @tailrec
     def strHelper(referenceCell: ReferenceCell): String = {
-      referenceCell.ptrDerefence.getOrElse(new EmptyCell) match {
+      referenceCell.ptrDerefence.getOrElse(None) match {
         case c: ReferenceCell => if (c == this) "cyclic" else strHelper(c)
         case r => r.toString
+        case None => "outOfRange"
       }
     }
 
