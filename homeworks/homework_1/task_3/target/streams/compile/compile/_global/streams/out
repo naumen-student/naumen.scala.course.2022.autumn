@@ -1,0 +1,3 @@
+[debug] Acquiring lock on file C:\Users\home\IdeaProjects\task_3\project\target\.sbt-compilation-infos\root-compile\.sbt-idea-lock ...
+[error] C:\Users\home\IdeaProjects\task_3\src\main\scala\Main.java:1:1: class, interface, or enum expected
+[debug] Releasing lock on file C:\Users\home\IdeaProjects\task_3\project\target\.sbt-compilation-infos\root-compile\.sbt-idea-lock.
