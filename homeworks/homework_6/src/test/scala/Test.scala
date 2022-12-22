@@ -21,13 +21,18 @@ object Test extends TestSuite{
 
     'morse - {
       assert(Exercises.morse("SOS") == "... --- ...")
-      assert(Exercises.morse("Hello world!") == ".... . .-.. .-.. ---   .-- --- .-. .-.. -..!")
+//      отделил восклицательный знак пробелом, так как в условии коды разделяются пробелами
+      println(Exercises.morse("Hello world!"))
+      assert(Exercises.morse("Hello world!") == ".... . .-.. .-.. ---   .-- --- .-. .-.. -.. !")
     }
 
     'wordReverse - {
       assert(Exercises.wordReverse("Зима!.. Крестьянин, торжествуя...") == "Амиз!.. Ниняьтсерк, яувтсежрот...")
+      assert(Exercises.wordReverse("Зима!.. Крестьянин, торжествуя") == "Амиз!.. Ниняьтсерк, яувтсежрот")
+      assert(Exercises.wordReverse("Зима") == "Амиз")
+      assert(Exercises.wordReverse("!Зима!") == "!Амиз!")
+      assert(Exercises.wordReverse("") == "")
+      assert(Exercises.wordReverse("!!!!...") == "!!!!...")
     }
-
-
   }
 }
