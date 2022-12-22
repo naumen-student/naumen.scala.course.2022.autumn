@@ -1,3 +1,6 @@
 /.idea
-/target
+target
 project/target
+null
+*.jar
+scala-sbt
