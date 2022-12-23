@@ -1,0 +1,30 @@
+PS C:\Users\Knyazzini> scala
+Welcome to Scala 2.12.10 (OpenJDK 64-Bit Server VM, Java 1.8.0_292).
+Type in expressions for evaluation. Or try :help.
+
+scala> val name = "Igor"
+name: String = Igor
+
+scala> def sayHi(s: String) = {
+     | println("Hello Scala! This is " + s)
+     | }
+sayHi: (s: String)Unit
+
+scala> sayHi(name)
+Hello Scala! This is Igor
+
+scala> sayHi(name.reverse)
+Hello Scala! This is rogI
+
+scala> def sayHiRu(s: String) = {
+     | println("Privet Scala! This is " + s)
+     | }
+sayHiRu: (s: String)Unit
+
+scala> sayHiRu(name)
+Privet Scala! This is Igor
+
+scala> sayHiRu(name.reverse)
+Privet Scala! This is rogI
+
+scala>
