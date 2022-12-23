@@ -1,3 +1,5 @@
+import DataList.{EmptyList, NonEmptyList}
+
 import scala.annotation.tailrec
 
 object ListOps {
@@ -9,8 +11,14 @@ object ListOps {
    * @param f функция свёртывания. Применяется попарно к предыдущему результату применения и i-ому элементу списка
    * @return None - если список пустой
    */
-  def foldOption[T](f: (T, T) => T): DataList[T] => Option[T] = ???
-
+  def foldOption[T](f: (T, T) => T): DataList[T] => Option[T] = dataList => {
+    @tailrec
+    def foldOptHelper(current: DataList[T], acc: Option[T] = None): Option[T] = current match {
+      case EmptyList => acc
+      case NonEmptyList(head, tail) => foldOptHelper(tail, Some(acc.fold(head)(f(_, head))))
+    }
+    foldOptHelper(dataList)
+  }
 
   /**
    * Используя foldOption[T](f: (T, T) => T) реализуйте суммирование всех элементов списка.
@@ -22,7 +30,7 @@ object ListOps {
      */
     def sumT(a: T, b: T) = implicitly[Numeric[T]].plus(a, b)
 
-    ???
+    foldOption(sumT)(list).getOrElse(implicitly[Numeric[T]].zero)
   }
 
   /**
@@ -30,7 +38,18 @@ object ListOps {
    * @param f - фильтрующее правило (если f(a[i]) == true, то элемент остаётся в списке)
    */
   @tailrec
-  private def filterImpl[T](f: T => Boolean)(buffer: DataList[T])(l: DataList[T]): DataList[T] = ???
+  private def filterImpl[T](f: T => Boolean)(buffer: DataList[T])(l: DataList[T]): DataList[T] = l match {
+    case NonEmptyList(head, tail) =>
+      if (f(head)) filterImpl(f)(NonEmptyList(head, buffer))(tail)
+      else filterImpl(f)(buffer)(tail)
+    case EmptyList => reverse(buffer)
+  }
+
+  @tailrec
+  private def reverse[T](list: DataList[T], acc: DataList[T] = EmptyList): DataList[T] = list match {
+    case NonEmptyList(head, tail) => reverse(tail, NonEmptyList(head, acc))
+    case EmptyList => acc
+  }
 
   final def filter[T](f: T => Boolean): DataList[T] => DataList[T] = filterImpl(f)(DataList.EmptyList)
 
@@ -43,6 +62,5 @@ object ListOps {
    * Используя композицию функций реализуйте collect. Collect - комбинация filter и map.
    * В качестве фильтрующего правила нужно использовать f.isDefinedAt
    */
-  def collect[A, B](f: PartialFunction[A, B]): DataList[A] => DataList[B] = ???
-
+  def collect[A, B](f: PartialFunction[A, B]): DataList[A] => DataList[B] = map(f).compose(filter(f.isDefinedAt))
 }
