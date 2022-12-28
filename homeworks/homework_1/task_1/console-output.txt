@@ -1,0 +1,28 @@
+Last login: Thu Sep 29 21:05:14 on ttys000
+dariakatyaeva@Darias-MacBook-Air ~ % amm
+Loading...
+Welcome to the Ammonite Repl 2.4.0 (Scala 2.13.6 Java 1.8.0_302)
+@ val name = "Daria"
+name: String = "Daria"
+
+@ val hi = List("Hello", "Привет", "Hola", "Bonjour")
+hi: List[String] = List(
+  "Hello",
+  "\u041f\u0440\u0438\u0432\u0435\u0442",
+  "Hola",
+  "Bonjour"
+)
+
+@ hi.foreach(arg => println(s"$arg Scala! This is $name"))
+Hello Scala! This is Daria
+Привет Scala! This is Daria
+Hola Scala! This is Daria
+Bonjour Scala! This is Daria
+
+
+@ hi.foreach(arg => println(s"$arg Scala! This is ${name.reverse}"))
+Hello Scala! This is airaD
+Привет Scala! This is airaD
+Hola Scala! This is airaD
+Bonjour Scala! This is airaD
+
