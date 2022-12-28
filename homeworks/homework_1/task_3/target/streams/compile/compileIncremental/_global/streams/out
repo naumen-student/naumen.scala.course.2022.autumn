@@ -1,0 +1,57 @@
+[debug] [zinc] IncrementalCompile -----------
+[debug] IncrementalCompile.incrementalCompile
+[debug] previous = Stamps for: 0 products, 0 sources, 0 libraries
+[debug] current source = Set(${BASE}/src/main/scala/example/Main.scala)
+[debug] > initialChanges = InitialChanges(Changes(added = Set(${BASE}/src/main/scala/example/Main.scala), removed = Set(), changed = Set(), unmodified = ...),Set(),Set(),API Changes: Set())
+[debug] Full compilation, no sources in previous analysis.
+[debug] all 1 sources are invalidated
+[debug] Initial set of included nodes: 
+[debug] Recompiling all sources: number of invalidated sources > 50.0% of all sources
+[debug] compilation cycle 1
+[info] compiling 1 Scala source to C:\Users\artem\IdeaProjects\SbtExampleProject\target\scala-2.13\classes ...
+[debug] Getting org.scala-sbt:compiler-bridge_2.13:1.7.1:compile for Scala 2.13.9
+[info] Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.9. Compiling...
+[debug] Creating plain compiler interface for 2.13.9.
+[debug]   > Arguments: 
+[debug] 	-d
+[debug] 	C:\Users\artem\AppData\Local\Temp\sbt_cf1646ab
+[debug] 	-nowarn
+[debug] 	-bootclasspath
+[debug] 	C:\Users\artem\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.13.9\scala-library-2.13.9.jar
+[debug] 	-classpath
+[debug] 	C:\Users\artem\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-sbt\compiler-interface\1.7.1\compiler-interface-1.7.1.jar;C:\Users\artem\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-sbt\util-interface\1.7.0\util-interface-1.7.0.jar;C:\Users\artem\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-sbt\compiler-bridge_2.13\1.7.1\compiler-bridge_2.13-1.7.1-sources.jar;C:\Users\artem\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-compiler\2.13.9\scala-compiler-2.13.9.jar;C:\Users\artem\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-reflect\2.13.9\scala-reflect-2.13.9.jar;C:\Users\artem\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\io\github\java-diff-utils\java-diff-utils\4.12\java-diff-utils-4.12.jar;C:\Users\artem\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\jline\jline\3.21.0\jline-3.21.0.jar;C:\Users\artem\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\net\java\dev\jna\jna\5.9.0\jna-5.9.0.jar
+[debug] 	C:\Users\artem\AppData\Local\Temp\sbt_e3689341\scala\ZincCompat.scala
+[debug] 	C:\Users\artem\AppData\Local\Temp\sbt_e3689341\xsbt\API.scala
+[debug] 	C:\Users\artem\AppData\Local\Temp\sbt_e3689341\xsbt\AbstractZincFile.scala
+[debug] 	C:\Users\artem\AppData\Local\Temp\sbt_e3689341\xsbt\Analyzer.scala
+[debug] 	C:\Users\artem\AppData\Local\Temp\sbt_e3689341\xsbt\CallbackGlobal.scala
+[debug] 	C:\Users\artem\AppData\Local\Temp\sbt_e3689341\xsbt\ClassName.scala
+[debug] 	C:\Users\artem\AppData\Local\Temp\sbt_e3689341\xsbt\Compat.scala
+[debug] 	C:\Users\artem\AppData\Local\Temp\sbt_e3689341\xsbt\CompilerBridge.scala
+[debug] 	C:\Users\artem\AppData\Local\Temp\sbt_e3689341\xsbt\ConsoleBridge.scala
+[debug] 	C:\Users\artem\AppData\Local\Temp\sbt_e3689341\xsbt\DelegatingReporter.scala
+[debug] 	C:\Users\artem\AppData\Local\Temp\sbt_e3689341\xsbt\Dependency.scala
+[debug] 	C:\Users\artem\AppData\Local\Temp\sbt_e3689341\xsbt\ExtractAPI.scala
+[debug] 	C:\Users\artem\AppData\Local\Temp\sbt_e3689341\xsbt\ExtractUsedNames.scala
+[debug] 	C:\Users\artem\AppData\Local\Temp\sbt_e3689341\xsbt\GlobalHelpers.scala
+[debug] 	C:\Users\artem\AppData\Local\Temp\sbt_e3689341\xsbt\InteractiveConsoleBridge.scala
+[debug] 	C:\Users\artem\AppData\Local\Temp\sbt_e3689341\xsbt\InteractiveConsoleFactoryBridge.scala
+[debug] 	C:\Users\artem\AppData\Local\Temp\sbt_e3689341\xsbt\InteractiveConsoleHelper.scala
+[debug] 	C:\Users\artem\AppData\Local\Temp\sbt_e3689341\xsbt\InteractiveConsoleResponse.scala
+[debug] 	C:\Users\artem\AppData\Local\Temp\sbt_e3689341\xsbt\JarUtils.scala
+[debug] 	C:\Users\artem\AppData\Local\Temp\sbt_e3689341\xsbt\JavaUtils.scala
+[debug] 	C:\Users\artem\AppData\Local\Temp\sbt_e3689341\xsbt\LocalToNonLocalClass.scala
+[debug] 	C:\Users\artem\AppData\Local\Temp\sbt_e3689341\xsbt\LocateClassFile.scala
+[debug] 	C:\Users\artem\AppData\Local\Temp\sbt_e3689341\xsbt\Log.scala
+[debug] 	C:\Users\artem\AppData\Local\Temp\sbt_e3689341\xsbt\Message.scala
+[debug] 	C:\Users\artem\AppData\Local\Temp\sbt_e3689341\xsbt\ScaladocBridge.scala
+[debug]       
+[info]   Compilation completed in 12.016s.
+[debug] [zinc] Running cached compiler 2029289b for Scala compiler version 2.13.9
+[debug] [zinc] The Scala compiler is invoked with:
+[debug] 	-bootclasspath
+[debug] 	C:\Users\artem\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.13.9\scala-library-2.13.9.jar
+[debug] 	-classpath
+[debug] 	C:\Users\artem\IdeaProjects\SbtExampleProject\target\scala-2.13\classes
+[debug] Scala compilation took 14.0442139 s
+[info] done compiling
