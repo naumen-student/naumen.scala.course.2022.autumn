@@ -1,0 +1,11 @@
+[debug] Packaging C:\Users\Andrey\IdeaProjects\SbtHomework_1\target\scala-2.13\sbthomework_1_2.13-0.1.0-SNAPSHOT.jar ...
+[debug] Input file mappings:
+[debug] 	homework_1
+[debug] 	  C:\Users\Andrey\IdeaProjects\SbtHomework_1\target\scala-2.13\classes\homework_1
+[debug] 	homework_1\Main$.class
+[debug] 	  C:\Users\Andrey\IdeaProjects\SbtHomework_1\target\scala-2.13\classes\homework_1\Main$.class
+[debug] 	homework_1\Main$delayedInit$body.class
+[debug] 	  C:\Users\Andrey\IdeaProjects\SbtHomework_1\target\scala-2.13\classes\homework_1\Main$delayedInit$body.class
+[debug] 	homework_1\Main.class
+[debug] 	  C:\Users\Andrey\IdeaProjects\SbtHomework_1\target\scala-2.13\classes\homework_1\Main.class
+[debug] Done packaging.
