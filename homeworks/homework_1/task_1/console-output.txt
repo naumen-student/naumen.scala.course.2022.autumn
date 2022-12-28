@@ -1,0 +1,33 @@
+C:\Users\79991>scala
+Welcome to Scala 2.12.10 (OpenJDK 64-Bit Server VM, Java 1.8.0_282).
+Type in expressions for evaluation. Or try :help.
+
+scala> val greetingPhrase = "Hello Scala! This is "
+greetingPhrase: String = "Hello Scala! This is "
+
+scala> val myNme = "Dennis"
+myNme: String = Dennis
+
+scala> val fullGreeting = greetingPhrase + myNme
+fullGreeting: String = Hello Scala! This is Dennis
+
+scala> println(fullGreeting)
+Hello Scala! This is Dennis
+
+scala> val basePhrase = " Scala! This is "
+basePhrase: String = " Scala! This is "
+
+scala> val espGreeting = "Hola"
+espGreeting: String = Hola
+
+scala> val deuGreeting = "Guten Tag"
+deuGreeting: String = Guten Tag
+
+scala> println(espGreeting + basePhrase + myNme)
+Hola Scala! This is Dennis
+
+scala> println(deuGreeting + basePhrase + myNme)
+Guten Tag Scala! This is Dennis
+
+scala> println(deuGreeting + basePhrase + myNme.reverse)
+Guten Tag Scala! This is sinneD
