@@ -1,0 +1,28 @@
+C:\Users\Anzhelika>scala
+Welcome to Scala 2.12.10 (OpenJDK 64-Bit Server VM, Java 1.8.0_292).
+Type in expressions for evaluation. Or try :help.
+
+scala> val greeting = " Scala! This is "
+greeting: String = " Scala! This is "
+
+scala> val name = "Anzhelika"
+name: String = Anzhelika
+
+scala> val greetingWithName = greeting ++ name
+greetingWithName: String = " Scala! This is Anzhelika"
+
+scala> print("Hello" + greetingWithName)
+Hello Scala! This is Anzhelika
+
+scala> val greetingWords = Seq("Salva", "Ciao", "Buongiorno")
+greetingWords: Seq[String] = List(Salva, Ciao, Buongiorno)
+
+scala> greetingWords.foreach(arg => println(arg ++ greetingWithName))
+Salva Scala! This is Anzhelika
+Ciao Scala! This is Anzhelika
+Buongiorno Scala! This is Anzhelika
+
+scala> greetingWords.foreach(arg => println(arg ++ greeting ++ name.reverse))
+Salva Scala! This is akilehznA
+Ciao Scala! This is akilehznA
+Buongiorno Scala! This is akilehznA
