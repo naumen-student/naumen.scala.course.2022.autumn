@@ -1,0 +1,44 @@
+ekaterina@ekaterina-HP-Laptop-14s-dq2xxx:~$ amm
+Loading...
+Welcome to the Ammonite Repl 2.5.4 (Scala 2.13.8 Java 11.0.16)
+@ var welcome = "Hello" 
+welcome: String = "Hello"
+
+@ val staticPart = " Scala! This is " 
+staticPart: String = " Scala! This is "
+
+@ val name = "Ekaterina" 
+name: String = "Ekaterina"
+
+@ print(welcome + staticPart + name) 
+Hello Scala! This is Ekaterina
+
+@ welcome = ("Hola", "Guten tag") 
+cmd4.sc:1: type mismatch;
+ found   : (String, String)
+ required: String
+val res4 = welcome = ("Hola", "Guten tag")
+                     ^
+Compilation Failed
+
+@ val welcome = new Array[String](2) 
+welcome: Array[String] = Array(null, null)
+
+@ welcome(0) = "Hola" 
+
+
+@ welcome(1) = "Guten tag" 
+
+
+@ for (i <- 0 to 1) println(welcome(i) + staticPart + name) 
+Hola Scala! This is Ekaterina
+Guten tag Scala! This is Ekaterina
+
+
+@ for (i <- 0 to 1) println(welcome(i) + staticPart + name.reverse) 
+Hola Scala! This is aniretakE
+Guten tag Scala! This is aniretakE
+
+
+@ exit 
+Bye
