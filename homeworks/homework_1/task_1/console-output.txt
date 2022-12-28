@@ -1,0 +1,29 @@
+(base) MacBook-Pro-Grigorij:~ grigorijkosov$ amm
+Loading...
+Welcome to the Ammonite Repl 2.4.0 (Scala 2.13.6 Java 1.8.0_292)
+@ 
+val greeting = (helloVersion: String, name: String) => println(s"$helloVersion Scala!This is $name") 
+greeting: (String, String) => Unit = ammonite.$sess.cmd0$$$Lambda$1356/1184124073@e8df99a
+
+@ greeting("Hello", "Grisha") 
+Hello Scala!This is Grisha
+
+
+@ greeting("Hola", "Grisha") 
+Hola Scala!This is Grisha
+
+
+@ greeting("Guten Tag", "Grisha") 
+Guten Tag Scala!This is Grisha
+
+
+@ greeting("Hello", "Grisha".reverse) 
+Hello Scala!This is ahsirG
+
+
+@ greeting("Guten Tag", "Grisha".reverse) 
+Guten Tag Scala!This is ahsirG
+
+
+@ greeting("Hola", "Grisha".reverse) 
+Hola Scala!This is ahsirG
