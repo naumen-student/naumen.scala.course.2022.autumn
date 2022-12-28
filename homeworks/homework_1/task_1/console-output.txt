@@ -1,0 +1,23 @@
+@ val name = "tfox"
+name: String = "tfox"
+
+@ val helloText = "Hello Scala! This is "
+helloText: String = "Hello Scala! This is "
+
+@ println(s"$helloText$name")
+Hello Scala! This is tfox
+
+@ val holaText = helloText.replace("Hello", "Hola")
+holaText: String = "Hola Scala! This is "
+
+@ println(s"$holaText$name")
+Hola Scala! This is tfox
+
+@ val reverseName = name.reverse
+reverseName: String = "xoft"
+
+@ println(s"$helloText$reverseName")
+Hello Scala! This is xoft
+
+@ println(s"$holaText$reverseName")
+Hola Scala! This is xoft
