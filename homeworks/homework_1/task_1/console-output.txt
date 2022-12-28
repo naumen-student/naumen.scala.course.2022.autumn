@@ -1,0 +1,12 @@
+scala> val name = "Ololeg"
+val name: String = Ololeg
+
+scala> ("Hello" :: "Priviet" :: "Dratvuti" :: Nil).foreach(g => println(s"$g Scala! This is $name"))
+Hello Scala! This is Ololeg
+Priviet Scala! This is Ololeg
+Dratvuti Scala! This is Ololeg
+
+scala> ("Hello" :: "Priviet" :: "Dratvuti" :: Nil).foreach(g => println(s"$g Scala! This is ${name.reverse}"))
+Hello Scala! This is gelolO
+Priviet Scala! This is gelolO
+Dratvuti Scala! This is gelolO
