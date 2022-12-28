@@ -1,0 +1,47 @@
+C:\Users\Анна>scala
+Welcome to Scala 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 17.0.2).
+Type in expressions for evaluation. Or try :help.
+
+scala> val name = "Anya Zhbankova"
+name: String = Anya Zhbankova
+
+scala> val eng = s"Hello Scala! This is $name"
+eng: String = Hello Scala! This is Anya Zhbankova
+
+scala> println(eng)
+Hello Scala! This is Anya Zhbankova
+
+scala> val span = eng.replace("Hello", "Hola")
+span: String = Hola Scala! This is Anya Zhbankova
+
+scala> println(span)
+Hola Scala! This is Anya Zhbankova
+
+scala> val rus = eng.replace("Hello", "Privet")
+rus: String = Privet Scala! This is Anya Zhbankova
+
+scala> println(rus)
+Privet Scala! This is Anya Zhbankova
+
+scala> val rev_name = name.reverse
+rev_name: String = avoknabhZ aynA
+
+scala> val rev_eng = eng.replace(name, rev_name)
+rev_eng: String = Hello Scala! This is avoknabhZ aynA
+
+scala> println(rev_eng)
+Hello Scala! This is avoknabhZ aynA
+
+scala> val rev_span = span.replace(name, rev_name)
+rev_span: String = Hola Scala! This is avoknabhZ aynA
+
+scala> println(rev_span)
+Hola Scala! This is avoknabhZ aynA
+
+scala> val rev_rus = rus.replace(name, rev_name)
+rev_rus: String = Privet Scala! This is avoknabhZ aynA
+
+scala> println(rev_rus)
+Privet Scala! This is avoknabhZ aynA
+
+scala>
