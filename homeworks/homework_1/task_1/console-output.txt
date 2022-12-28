@@ -1,0 +1,15 @@
+Welcome to Scala 3.2.0 (17.0.3, Java OpenJDK 64-Bit Server VM).
+Type in expressions for evaluation. Or try :help.
+                                                                                                                                                                                                                                            
+scala> val name = "Matthew"
+val name: String = Matthew
+                                                                                                                                                                                                                                            
+scala> Set("Hello", "Hi", "Bonjour").foreach(e => println(s"${e}, Scala! This is ${name}"))
+Hello, Scala! This is Matthew
+Hi, Scala! This is Matthew
+Bonjour, Scala! This is Matthew
+                                                                                                                                                                                                                                            
+scala> Set("Hello", "Hi", "Bonjour").foreach(e => println(s"${e}, Scala! This is ${name.reverse}"))
+Hello, Scala! This is wehttaM
+Hi, Scala! This is wehttaM
+Bonjour, Scala! This is wehttaM
