@@ -1,0 +1,5 @@
+[debug] [watch] [first-scala / Compile / run] Found inputs: C:\Users\79378\Desktop\first-scala\*.{java,scala},C:\Users\79378\Desktop\first-scala\src\main\java\**\*.{java,scala},C:\Users\79378\Desktop\first-scala\src\main\resources\**\*,C:\Users\79378\Desktop\first-scala\src\main\scala\**\*.{java,scala},C:\Users\79378\Desktop\first-scala\src\main\scala-2.13\**\*.{java,scala}
+[info] 1. Monitoring source files for first-scala/run...
+[info]    Press <enter> to interrupt or '?' for more options.
+[debug] [watch] [debug] Received input event: Run().
+[debug] [watch] [debug] Received input event: Run().

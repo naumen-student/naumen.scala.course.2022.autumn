@@ -1,0 +1,64 @@
+[debug] 
+[debug] Initial source changes: 
+[debug] 	removed:Set()
+[debug] 	added: Set()
+[debug] 	modified: Set()
+[debug] Invalidated products: Set(C:\Users\79378\Desktop\first-scala\target\scala-2.13\classes\example\Main$.class, C:\Users\79378\Desktop\first-scala\target\scala-2.13\classes\example\Main$delayedInit$body.class, C:\Users\79378\Desktop\first-scala\target\scala-2.13\classes\example\Main.class)
+[debug] External API changes: API Changes: Set()
+[debug] Modified binary dependencies: Set()
+[debug] Initial directly invalidated classes: Set()
+[debug] 
+[debug] Sources indirectly invalidated by:
+[debug] 	product: Set(C:\Users\79378\Desktop\first-scala\src\main\scala\example\Main.scala)
+[debug] 	binary dep: Set()
+[debug] 	external source: Set()
+[debug] All sources are invalidated.
+[debug] Initial set of included nodes: 
+[debug] Recompiling all sources: number of invalidated sources > 50.0% of all sources
+[info] Compiling 1 Scala source to C:\Users\79378\Desktop\first-scala\target\scala-2.13\classes ...
+[debug] Getting org.scala-sbt:compiler-bridge_2.13:1.3.5:compile for Scala 2.13.9
+[info] Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.9. Compiling...
+[debug] Creating plain compiler interface for 2.13.9.
+[debug]   > Arguments: 
+[debug] 	-nowarn
+[debug] 	-d
+[debug] 	C:\Users\79378\AppData\Local\Temp\sbt_e011228b
+[debug] 	-bootclasspath
+[debug] 	C:\Users\79378\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.13.9\scala-library-2.13.9.jar
+[debug] 	-classpath
+[debug] 	C:\Users\79378\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\scala-sbt\compiler-interface\1.3.5\compiler-interface-1.3.5.jar;C:\Users\79378\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\com\google\protobuf\protobuf-java\3.7.0\protobuf-java-3.7.0.jar;C:\Users\79378\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\scala-sbt\util-interface\1.3.0\util-interface-1.3.0.jar;C:\Users\79378\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\scala-sbt\compiler-bridge_2.13\1.3.5\compiler-bridge_2.13-1.3.5-sources.jar;C:\Users\79378\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-compiler\2.13.9\scala-compiler-2.13.9.jar;C:\Users\79378\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-reflect\2.13.9\scala-reflect-2.13.9.jar;C:\Users\79378\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\io\github\java-diff-utils\java-diff-utils\4.12\java-diff-utils-4.12.jar;C:\Users\79378\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\jline\jline\3.21.0\jline-3.21.0.jar;C:\Users\79378\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\net\java\dev\jna\jna\5.9.0\jna-5.9.0.jar
+[debug] 	C:\Users\79378\AppData\Local\Temp\sbt_91a7adf6\xsbt\API.scala
+[debug] 	C:\Users\79378\AppData\Local\Temp\sbt_91a7adf6\xsbt\Analyzer.scala
+[debug] 	C:\Users\79378\AppData\Local\Temp\sbt_91a7adf6\xsbt\CallbackGlobal.scala
+[debug] 	C:\Users\79378\AppData\Local\Temp\sbt_91a7adf6\xsbt\ClassName.scala
+[debug] 	C:\Users\79378\AppData\Local\Temp\sbt_91a7adf6\xsbt\Command.scala
+[debug] 	C:\Users\79378\AppData\Local\Temp\sbt_91a7adf6\xsbt\Compat.scala
+[debug] 	C:\Users\79378\AppData\Local\Temp\sbt_91a7adf6\xsbt\CompilerInterface.scala
+[debug] 	C:\Users\79378\AppData\Local\Temp\sbt_91a7adf6\xsbt\ConsoleInterface.scala
+[debug] 	C:\Users\79378\AppData\Local\Temp\sbt_91a7adf6\xsbt\DelegatingReporter.scala
+[debug] 	C:\Users\79378\AppData\Local\Temp\sbt_91a7adf6\xsbt\Dependency.scala
+[debug] 	C:\Users\79378\AppData\Local\Temp\sbt_91a7adf6\xsbt\ExtractAPI.scala
+[debug] 	C:\Users\79378\AppData\Local\Temp\sbt_91a7adf6\xsbt\ExtractUsedNames.scala
+[debug] 	C:\Users\79378\AppData\Local\Temp\sbt_91a7adf6\xsbt\GlobalHelpers.scala
+[debug] 	C:\Users\79378\AppData\Local\Temp\sbt_91a7adf6\xsbt\InteractiveConsoleFactory.scala
+[debug] 	C:\Users\79378\AppData\Local\Temp\sbt_91a7adf6\xsbt\InteractiveConsoleHelper.scala
+[debug] 	C:\Users\79378\AppData\Local\Temp\sbt_91a7adf6\xsbt\InteractiveConsoleInterface.scala
+[debug] 	C:\Users\79378\AppData\Local\Temp\sbt_91a7adf6\xsbt\InteractiveConsoleResponse.scala
+[debug] 	C:\Users\79378\AppData\Local\Temp\sbt_91a7adf6\xsbt\JarUtils.scala
+[debug] 	C:\Users\79378\AppData\Local\Temp\sbt_91a7adf6\xsbt\JavaUtils.scala
+[debug] 	C:\Users\79378\AppData\Local\Temp\sbt_91a7adf6\xsbt\LocalToNonLocalClass.scala
+[debug] 	C:\Users\79378\AppData\Local\Temp\sbt_91a7adf6\xsbt\LocateClassFile.scala
+[debug] 	C:\Users\79378\AppData\Local\Temp\sbt_91a7adf6\xsbt\Log.scala
+[debug] 	C:\Users\79378\AppData\Local\Temp\sbt_91a7adf6\xsbt\Message.scala
+[debug] 	C:\Users\79378\AppData\Local\Temp\sbt_91a7adf6\xsbt\ScaladocInterface.scala
+[debug]       
+[info]   Compilation completed in 14.968s.
+[debug] Getting org.scala-sbt:compiler-bridge_2.13:1.3.5:compile for Scala 2.13.9
+[debug] [zinc] Running cached compiler 178cf9bd for Scala compiler version 2.13.9
+[debug] [zinc] The Scala compiler is invoked with:
+[debug] 	-bootclasspath
+[debug] 	C:\Users\79378\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.13.9\scala-library-2.13.9.jar
+[debug] 	-classpath
+[debug] 	C:\Users\79378\Desktop\first-scala\target\scala-2.13\classes
+[debug] Scala compilation took 17.0542239 s
+[info] Done compiling.

@@ -1,0 +1,23 @@
+scala> var name = "Il'dar Yumagulov"
+name: String = Il'dar Yumagulov
+
+scala> println(s"Hello Scala. This is $name")
+Hello Scala. This is Il'dar Yumagulov
+
+scala> println(s"Hola Scala. This is $name")
+Hola Scala. This is Il'dar Yumagulov
+
+scala> println(s"Guten tag Scala. This is $name")
+Guten tag Scala. This is Il'dar Yumagulov
+
+scala> name = name.reverse
+name: String = volugamuY rad'lI
+
+scala> println(s"Hello Scala. This is $name")
+Hello Scala. This is volugamuY rad'lI
+
+scala> println(s"Hola Scala. This is $name")
+Hola Scala. This is volugamuY rad'lI
+
+scala> println(s"Guten tag Scala. This is $name")
+Guten tag Scala. This is volugamuY rad'lI
