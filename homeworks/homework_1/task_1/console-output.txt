@@ -1,0 +1,35 @@
+Welcome to Scala 3.2.0 (1.8.0_292, Java OpenJDK 64-Bit Server VM).
+Type in expressions for evaluation. Or try :help.
+
+scala> def hello(helloWord: String = "Hello", name: String) : Unit = {println(s"$helloWord Scala! This is $name")}
+def hello(helloWord: String, name: String): Unit
+
+scala> var myName = "Yulya"
+var myName: String = Yulya
+
+scala> hello(name = myName)
+Hello Scala! This is Yulya
+
+scala> var secondHelloWord = "Hola"
+var secondHelloWord: String = Hola
+
+scala> var thirdHelloWord = "Guten tag"
+var thirdHelloWord: String = Guten tag
+
+scala> hello(helloWord = secondHelloWord, name = myName)
+Hola Scala! This is Yulya
+
+scala> hello(helloWord = thirdHelloWord, name = myName)
+Guten tag Scala! This is Yulya
+
+scala> var reversedName = myName.reverse
+var reversedName: String = ayluY
+
+scala> hello(name = reversedName)
+Hello Scala! This is ayluY
+
+scala> hello(helloWord = secondHelloWord, name = reversedName)
+Hola Scala! This is ayluY
+
+scala> hello(helloWord = thirdHelloWord, name = reversedName)
+Guten tag Scala! This is ayluY
