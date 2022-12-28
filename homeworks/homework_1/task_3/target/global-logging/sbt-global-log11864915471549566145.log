@@ -1,0 +1,7 @@
+[debug] > Exec(all {file:/D:/Py/Scala/task_3/}root/products {file:/D:/Py/Scala/task_3/}root/test:products, None, None)
+[debug] Evaluating tasks: Compile / products, Test / products
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[success] Total time: 0 s, completed 1 окт. 2022 г., 21:12:32
+[debug] > Exec(idea-shell, None, None)
+[debug] > Exec(, None, None)
+[debug] > Exec(idea-shell, None, None)
